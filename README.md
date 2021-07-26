@@ -14,4 +14,4 @@ To run the app on the local server, enter the commands:
 
 ---
 
-The site is available at the link: https://weatherapp-e3e7a.web.app/
+The app is available at the link: https://weatherapp-e3e7a.web.app/
