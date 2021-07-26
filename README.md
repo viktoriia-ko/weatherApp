@@ -11,3 +11,7 @@ To run the app on the local server, enter the commands:
 - yarn
 - json-server --watch src/city.list.json --port 3033
 - yarn start
+
+---
+
+The site is available at the link: https://weatherapp-e3e7a.web.app/
