@@ -9,7 +9,6 @@ This allows to input the name of the city in English, during input a list of cit
 To run the app on the local server, enter the commands:
 
 - yarn
-- json-server --watch src/city.list.json --port 3033
 - yarn start
 
 ---
