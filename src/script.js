@@ -1,4 +1,5 @@
 import "./style.css";
+import moment from "moment";
 const CITIES_URL =
   "https://weatherapp-e3e7a-default-rtdb.europe-west1.firebasedatabase.app/cities.json";
 
@@ -31,9 +32,8 @@ const displayResults = (weather) => {
   const city = document.querySelector(".location .city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
-  let now = new Date();
   const date = document.querySelector(".location .date");
-  date.innerText = dateBuilder(now);
+  date.innerText = moment().format("dddd, D MMMM  YYYY");
 
   const icon = document.querySelector(".current .icon");
   icon.innerHTML = `<img src="https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png">`;
@@ -50,41 +50,6 @@ const displayResults = (weather) => {
   const humidity = document.querySelector(".current .humidity");
   humidity.innerHTML = `Humidity: ${weather.main.humidity} %`;
 };
-
-const dateBuilder = (d) => {
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  const days = [
-    "Sunday",
-    "Monday",
-    "Thuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  const day = days[d.getDay()];
-  const date = d.getDate();
-  const month = months[d.getMonth()];
-  const year = d.getFullYear();
-
-  return `${day} ${date} ${month} ${year}`;
-};
-/////////////////////////////////
 
 const searchCities = async (searchText) => {
   const res = await fetch(CITIES_URL);
