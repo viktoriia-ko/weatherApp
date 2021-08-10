@@ -1,6 +1,6 @@
 ## The Current Weather App
 
-This app shows the current weather in the requested city.
+This web app shows the current weather in the requested city.
 
 This allows to input the name of the city in English, during input a list of cities appears, matching the inputted characters.
 
